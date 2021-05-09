@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2021 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<configuration description="Known failures for the host-unit-tests suite.">
+    <!-- <option name="exclude-filter" value="MODULE_NAME" /> Excludes whole module -->
+    <!-- <option name="exclude-filter" value="MODULE_NAME PACKAGE_NAME" /> Excludes whole package -->
+    <!-- <option name="exclude-filter" value="MODULE_NAME PACKAGE_NAME.CLASS_NAME" /> Excludes whole class -->
+    <!-- <option name="exclude-filter" value="MODULE_NAME PACKAGE_NAME.CLASS_NAME#TEST_NAME" /> Excludes individual test -->
+
+    <option name="exclude-filter" value="apache-harmony-jdwp-tests" />
+    <!-- b/181269377 -->
+    <option name="exclude-filter" value="layoutlib-create-tests" />
+    <option name="exclude-filter" value="layoutlib-tests" />
+</configuration>
