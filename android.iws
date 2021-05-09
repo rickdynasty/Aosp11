@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8427530-1b59-4ba5-bc98-8d4f10ffb659" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frameworks/base" />
+  </component>
+  <component name="ProjectId" id="1sHYQoWoFZ0lTwGcukAySvAzwam" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android.ipr" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8427530-1b59-4ba5-bc98-8d4f10ffb659" name="Default Changelist" comment="" />
+      <created>1620530972001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620530972001</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="674" y="30" width="638" height="939" key="find.popup" timestamp="1620542966008">
+      <screen x="67" y="27" width="1853" height="945" />
+    </state>
+    <state x="674" y="30" width="638" height="939" key="find.popup/67.27.1853.945@67.27.1853.945" timestamp="1620542966008" />
+    <state x="610" y="237" width="697" height="747" key="search.everywhere.popup" timestamp="1620545236099">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="610" y="237" width="697" height="747" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1620545236099" />
+    <state x="656" y="242" width="672" height="678" key="search.everywhere.popup/67.27.1853.945@67.27.1853.945" timestamp="1620543243299" />
+  </component>
+</project>

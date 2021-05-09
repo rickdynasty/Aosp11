@@ -1,0 +1,171 @@
+// Signature format: 2.0
+package android.app {
+
+  public class BroadcastOptions {
+    method public int getMaxManifestReceiverApiLevel();
+    method public void setMaxManifestReceiverApiLevel(int);
+  }
+
+  public final class PendingIntent implements android.os.Parcelable {
+    method @RequiresPermission("android.permission.GET_INTENT_SENDER_INTENT") public boolean intentFilterEquals(@Nullable android.app.PendingIntent);
+  }
+
+}
+
+package android.app.usage {
+
+  public class NetworkStatsManager {
+    method @RequiresPermission(anyOf={android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK, android.Manifest.permission.NETWORK_STACK}) public void notifyNetworkStatus(@NonNull java.util.List<android.net.Network>, @NonNull java.util.List<android.net.NetworkStateSnapshot>, @Nullable String, @NonNull java.util.List<android.net.UnderlyingNetworkInfo>);
+  }
+
+}
+
+package android.content {
+
+  public abstract class Context {
+    field public static final String PAC_PROXY_SERVICE = "pac_proxy";
+    field public static final String TEST_NETWORK_SERVICE = "test_network";
+  }
+
+}
+
+package android.net {
+
+  public final class EthernetNetworkSpecifier extends android.net.NetworkSpecifier implements android.os.Parcelable {
+    ctor public EthernetNetworkSpecifier(@NonNull String);
+    method public int describeContents();
+    method @Nullable public String getInterfaceName();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.net.EthernetNetworkSpecifier> CREATOR;
+  }
+
+  public static final class IpSecManager.UdpEncapsulationSocket implements java.lang.AutoCloseable {
+    method public int getResourceId();
+  }
+
+  public class NetworkPolicyManager {
+    method @RequiresPermission(android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK) public int getMultipathPreference(@NonNull android.net.Network);
+    method @RequiresPermission(android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK) public int getRestrictBackgroundStatus(int);
+    method @RequiresPermission(android.Manifest.permission.OBSERVE_NETWORK_POLICY) public boolean isUidNetworkingBlocked(int, boolean);
+    method @RequiresPermission(android.Manifest.permission.OBSERVE_NETWORK_POLICY) public boolean isUidRestrictedOnMeteredNetworks(int);
+    method @RequiresPermission(android.Manifest.permission.OBSERVE_NETWORK_POLICY) public void registerNetworkPolicyCallback(@Nullable java.util.concurrent.Executor, @NonNull android.net.NetworkPolicyManager.NetworkPolicyCallback);
+    method @RequiresPermission(android.Manifest.permission.OBSERVE_NETWORK_POLICY) public void unregisterNetworkPolicyCallback(@NonNull android.net.NetworkPolicyManager.NetworkPolicyCallback);
+  }
+
+  public static interface NetworkPolicyManager.NetworkPolicyCallback {
+    method public default void onUidBlockedReasonChanged(int, int);
+  }
+
+  public final class NetworkStateSnapshot implements android.os.Parcelable {
+    ctor public NetworkStateSnapshot(@NonNull android.net.Network, @NonNull android.net.NetworkCapabilities, @NonNull android.net.LinkProperties, @Nullable String, int);
+    method public int describeContents();
+    method public int getLegacyType();
+    method @NonNull public android.net.LinkProperties getLinkProperties();
+    method @NonNull public android.net.Network getNetwork();
+    method @NonNull public android.net.NetworkCapabilities getNetworkCapabilities();
+    method @Nullable public String getSubscriberId();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.net.NetworkStateSnapshot> CREATOR;
+  }
+
+  public class NetworkWatchlistManager {
+    method @Nullable public byte[] getWatchlistConfigHash();
+  }
+
+  public class PacProxyManager {
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_STACK, android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK, android.Manifest.permission.NETWORK_SETTINGS}) public void addPacProxyInstalledListener(@NonNull java.util.concurrent.Executor, @NonNull android.net.PacProxyManager.PacProxyInstalledListener);
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_STACK, android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK, android.Manifest.permission.NETWORK_SETTINGS}) public void removePacProxyInstalledListener(@NonNull android.net.PacProxyManager.PacProxyInstalledListener);
+    method @RequiresPermission(anyOf={android.Manifest.permission.NETWORK_STACK, android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK, android.Manifest.permission.NETWORK_SETTINGS}) public void setCurrentProxyScriptUrl(@Nullable android.net.ProxyInfo);
+  }
+
+  public static interface PacProxyManager.PacProxyInstalledListener {
+    method public void onPacProxyInstalled(@Nullable android.net.Network, @NonNull android.net.ProxyInfo);
+  }
+
+  public final class Proxy {
+    method public static void setHttpProxyConfiguration(@Nullable android.net.ProxyInfo);
+  }
+
+  public final class UnderlyingNetworkInfo implements android.os.Parcelable {
+    ctor public UnderlyingNetworkInfo(int, @NonNull String, @NonNull java.util.List<java.lang.String>);
+    method public int describeContents();
+    method @NonNull public String getIface();
+    method public int getOwnerUid();
+    method @NonNull public java.util.List<java.lang.String> getUnderlyingIfaces();
+    method public void writeToParcel(@NonNull android.os.Parcel, int);
+    field @NonNull public static final android.os.Parcelable.Creator<android.net.UnderlyingNetworkInfo> CREATOR;
+  }
+
+  public class VpnManager {
+    field public static final int TYPE_VPN_LEGACY = 3; // 0x3
+    field public static final int TYPE_VPN_NONE = -1; // 0xffffffff
+    field public static final int TYPE_VPN_OEM = 4; // 0x4
+    field public static final int TYPE_VPN_PLATFORM = 2; // 0x2
+    field public static final int TYPE_VPN_SERVICE = 1; // 0x1
+  }
+
+}
+
+package android.os {
+
+  public final class BatteryStatsManager {
+    method @RequiresPermission(anyOf={android.net.NetworkStack.PERMISSION_MAINLINE_NETWORK_STACK, android.Manifest.permission.NETWORK_STACK}) public void reportNetworkInterfaceForTransports(@NonNull String, @NonNull int[]) throws java.lang.RuntimeException;
+  }
+
+  public class Binder implements android.os.IBinder {
+    method public final void markVintfStability();
+  }
+
+  public class Build {
+    method public static boolean isDebuggable();
+  }
+
+  public static class Build.VERSION {
+    field public static final int FIRST_SDK_INT;
+  }
+
+  public interface Parcelable {
+    method public default int getStability();
+  }
+
+  public class Process {
+    field public static final int VPN_UID = 1016; // 0x3f8
+  }
+
+  public class StatsServiceManager {
+    method @NonNull public android.os.StatsServiceManager.ServiceRegisterer getStatsCompanionServiceRegisterer();
+    method @NonNull public android.os.StatsServiceManager.ServiceRegisterer getStatsManagerServiceRegisterer();
+    method @NonNull public android.os.StatsServiceManager.ServiceRegisterer getStatsdServiceRegisterer();
+  }
+
+  public static class StatsServiceManager.ServiceNotFoundException extends java.lang.Exception {
+    ctor public StatsServiceManager.ServiceNotFoundException(@NonNull String);
+  }
+
+  public static final class StatsServiceManager.ServiceRegisterer {
+    method @Nullable public android.os.IBinder get();
+    method @Nullable public android.os.IBinder getOrThrow() throws android.os.StatsServiceManager.ServiceNotFoundException;
+  }
+
+}
+
+package android.telephony {
+
+  public abstract class CellSignalStrength {
+    method public static int getNumSignalStrengthLevels();
+  }
+
+  public class TelephonyManager {
+    method @NonNull public static int[] getAllNetworkTypes();
+  }
+
+}
+
+package android.util {
+
+  public final class Log {
+    method public static int logToRadioBuffer(int, @Nullable String, @Nullable String);
+  }
+
+}
+
