@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 4.1.0" client="cli" variant="all" version="4.1.0">
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertTrue(CollectionUtils.any(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it == &quot;E&quot; })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="32"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it == &quot;F&quot; })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="33"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertTrue(CollectionUtils.any(listOf(&quot;AA&quot;, &quot;BBB&quot;)) { it.length >= 3 })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="34"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf(&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;)) { it.length >= 4 })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="35"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf(&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;)) { it.length &lt; 0 })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="36"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf&lt;String>()) { true })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="37"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf&lt;String>()) { false })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="38"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertTrue(CollectionUtils.any(listOf(&quot;A&quot;)) { true })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="39"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#any`"
+        errorLine1="        assertFalse(CollectionUtils.any(listOf(&quot;A&quot;)) { false })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="40"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#indexOf`"
+        errorLine1="        assertEquals(4, CollectionUtils.indexOf(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it == &quot;E&quot; })"
+        errorLine2="                                        ~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="45"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#indexOf`"
+        errorLine1="        assertEquals(0, CollectionUtils.indexOf(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it == &quot;A&quot; })"
+        errorLine2="                                        ~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="46"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#indexOf`"
+        errorLine1="        assertEquals(1, CollectionUtils.indexOf(listOf(&quot;AA&quot;, &quot;BBB&quot;, &quot;CCCC&quot;)) { it.length >= 3 })"
+        errorLine2="                                        ~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="47"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#indexOf`"
+        errorLine1="        assertEquals(1, CollectionUtils.indexOf(listOf(&quot;AA&quot;, null, &quot;CCCC&quot;)) { it == null })"
+        errorLine2="                                        ~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="48"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#indexOf`"
+        errorLine1="        assertEquals(1, CollectionUtils.indexOf(listOf(null, &quot;CCCC&quot;)) { it != null })"
+        errorLine2="                                        ~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="49"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertFalse(CollectionUtils.all(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it != &quot;E&quot; })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="54"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)) { it != &quot;F&quot; })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="55"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertFalse(CollectionUtils.all(listOf(&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;)) { it.length > 2 })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="56"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf(&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;)) { it.length >= 1 })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="57"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf(&quot;A&quot;, &quot;BB&quot;, &quot;CCC&quot;)) { it.length &lt; 4 })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="58"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf&lt;String>()) { true })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="59"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf&lt;String>()) { false })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="60"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertTrue(CollectionUtils.all(listOf(1)) { true })"
+        errorLine2="                                   ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="61"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.CollectionUtils#all`"
+        errorLine1="        assertFalse(CollectionUtils.all(listOf(1)) { false })"
+        errorLine2="                                    ~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/CollectionUtilsTest.kt"
+            line="62"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertTrue(isIPv6ULA(parseNumericAddress(&quot;fc00::&quot;)));"
+        errorLine2="                   ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="38"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertTrue(isIPv6ULA(parseNumericAddress(&quot;fc00::1&quot;)));"
+        errorLine2="                   ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="39"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertTrue(isIPv6ULA(parseNumericAddress(&quot;fc00:1234::5678&quot;)));"
+        errorLine2="                   ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="40"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertTrue(isIPv6ULA(parseNumericAddress(&quot;fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff&quot;)));"
+        errorLine2="                   ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="41"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertFalse(isIPv6ULA(parseNumericAddress(&quot;fe00::&quot;)));"
+        errorLine2="                    ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="43"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.ConnectivityUtils#isIPv6ULA`"
+        errorLine1="        assertFalse(isIPv6ULA(parseNumericAddress(&quot;2480:1248::123:456&quot;)));"
+        errorLine2="                    ~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/ConnectivityUtilsTest.java"
+            line="44"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.app.AppOpsManager#noteOp`"
+        errorLine1="        when(mMockAppOps.noteOp(AppOpsManager.OPSTR_WIFI_SCAN, mUid, TEST_PKG_NAME,"
+        errorLine2="                         ~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/LocationPermissionCheckerTest.java"
+            line="109"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.app.AppOpsManager#noteOp`"
+        errorLine1="        when(mMockAppOps.noteOp(eq(AppOpsManager.OPSTR_COARSE_LOCATION), eq(mUid),"
+        errorLine2="                         ~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/LocationPermissionCheckerTest.java"
+            line="111"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.app.AppOpsManager#noteOp`"
+        errorLine1="        when(mMockAppOps.noteOp(eq(AppOpsManager.OPSTR_FINE_LOCATION), eq(mUid),"
+        errorLine2="                         ~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/LocationPermissionCheckerTest.java"
+            line="114"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_WIFI, getDisplayTransport(intArrayOf(TRANSPORT_WIFI)))"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="53"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_CELLULAR, getDisplayTransport(intArrayOf(TRANSPORT_CELLULAR)))"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="54"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_BLUETOOTH, getDisplayTransport(intArrayOf(TRANSPORT_BLUETOOTH)))"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="55"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_ETHERNET, getDisplayTransport(intArrayOf(TRANSPORT_ETHERNET)))"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="56"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_WIFI_AWARE, getDisplayTransport(intArrayOf(TRANSPORT_WIFI_AWARE)))"
+        errorLine2="                                           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="57"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_VPN, getDisplayTransport("
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="59"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_VPN, getDisplayTransport("
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="61"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_WIFI, getDisplayTransport("
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="64"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="        assertEquals(TRANSPORT_ETHERNET, getDisplayTransport("
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="66"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#getDisplayTransport`"
+        errorLine1="            getDisplayTransport(intArrayOf())"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#packBits`"
+        errorLine1="        assertEquals(packedBits, packBits(bits))"
+        errorLine2="                                 ~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="87"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#unpackBits`"
+        errorLine1="        assertTrue(bits contentEquals unpackBits(packedBits))"
+        errorLine2="                                      ~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="88"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.net.NetworkCapabilities()`"
+        errorLine1="        val nc = NetworkCapabilities()"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="93"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#inferRestrictedCapability`"
+        errorLine1="        assertFalse(NetworkCapabilitiesUtils.inferRestrictedCapability(nc))"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="95"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#inferRestrictedCapability`"
+        errorLine1="        assertTrue(NetworkCapabilitiesUtils.inferRestrictedCapability(nc))"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="99"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#inferRestrictedCapability`"
+        errorLine1="        assertFalse(NetworkCapabilitiesUtils.inferRestrictedCapability(nc))"
+        errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="104"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkCapabilitiesUtils#inferRestrictedCapability`"
+        errorLine1="        assertTrue(NetworkCapabilitiesUtils.inferRestrictedCapability(nc))"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkCapabilitiesUtilsTest.kt"
+            line="108"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberId`"
+        errorLine1="        assertEquals(&quot;123456...&quot;, scrubSubscriberId(&quot;1234567890123&quot;))"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="34"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberId`"
+        errorLine1="        assertEquals(&quot;123456...&quot;, scrubSubscriberId(&quot;1234567&quot;))"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="35"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberId`"
+        errorLine1="        assertEquals(&quot;123...&quot;, scrubSubscriberId(&quot;123&quot;))"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="36"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberId`"
+        errorLine1="        assertEquals(&quot;...&quot;, scrubSubscriberId(&quot;&quot;))"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="37"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberId`"
+        errorLine1="        assertEquals(&quot;null&quot;, scrubSubscriberId(null))"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="38"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberIds`"
+        errorLine1="        assertContainsStringsExactly(scrubSubscriberIds(arrayOf(&quot;1234567&quot;, &quot;&quot;, null))!!,"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="43"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberIds`"
+        errorLine1="        assertContainsStringsExactly(scrubSubscriberIds(arrayOf(&quot;12345&quot;))!!, &quot;12345...&quot;)"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="45"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberIds`"
+        errorLine1="        assertContainsStringsExactly(scrubSubscriberIds(arrayOf())!!)"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="46"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 31 (current min is 29): `com.android.net.module.util.NetworkIdentityUtils#scrubSubscriberIds`"
+        errorLine1="        assertNull(scrubSubscriberIds(null))"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="frameworks/libs/net/common/tests/unit/src/com/android/net/module/util/NetworkIdentityUtilsTest.kt"
+            line="47"
+            column="20"/>
+    </issue>
+
+</issues>

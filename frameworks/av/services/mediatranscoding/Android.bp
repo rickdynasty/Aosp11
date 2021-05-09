@@ -1,0 +1,72 @@
+// service library
+package {
+    default_applicable_licenses: [
+        "frameworks_av_services_mediatranscoding_license",
+    ],
+}
+
+// Added automatically by a large-scale-change
+// See: http://go/android-license-faq
+license {
+    name: "frameworks_av_services_mediatranscoding_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+cc_library_shared {
+    name: "libmediatranscodingservice",
+
+    srcs: ["MediaTranscodingService.cpp"],
+
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "libmediatranscoding",
+        "libutils",
+    ],
+
+    static_libs: [
+        "mediatranscoding_aidl_interface-ndk_platform",
+    ],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+    ],
+}
+
+cc_binary {
+    name: "mediatranscoding",
+
+    srcs: [
+        "main_mediatranscodingservice.cpp",
+    ],
+
+    shared_libs: [
+        "libbase",
+        // TODO(hkuang): Use libbinder_ndk
+        "libbinder",
+        "libutils",
+        "liblog",
+        "libbase",
+        "libmediatranscoding",
+        "libmediatranscodingservice",
+    ],
+
+    static_libs: [
+        "mediatranscoding_aidl_interface-ndk_platform",
+    ],
+
+    init_rc: ["mediatranscoding.rc"],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+    ],
+}
