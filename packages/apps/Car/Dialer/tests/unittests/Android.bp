@@ -1,0 +1,20 @@
+//############################################################
+// Car Dialer unit test target.                              #
+//############################################################
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_test {
+    name: "CarDialerUnitTests",
+
+    srcs: ["src/**/*.java"],
+
+    java_resource_dirs: ["config"],
+
+    static_libs: [
+        "androidx.test.ext.junit",
+    ],
+
+    instrumentation_for: "CarDialerAppForTesting",
+}

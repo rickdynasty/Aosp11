@@ -1,0 +1,30 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_test {
+    name: "CarRotaryControllerUnitTests",
+
+    certificate: "platform",
+
+    srcs: ["src/**/*.java"],
+
+    libs: [
+        "android.test.runner",
+        "android.test.base",
+    ],
+
+    static_libs: [
+        "android.car",
+        "androidx.test.core",
+        "androidx.test.rules",
+        "androidx.test.ext.junit",
+        "androidx.test.ext.truth",
+        "mockito-target-minus-junit4",
+        "platform-test-annotations",
+        "truth-prebuilt",
+        "testng",
+    ],
+
+    instrumentation_for: "CarRotaryController",
+}
