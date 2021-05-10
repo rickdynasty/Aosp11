@@ -1,0 +1,263 @@
+// Baseline format: 1.0
+AcronymName: org.chromium.net.CronetEngine#createURLStreamHandlerFactory():
+    Acronyms should not be capitalized in method names: was `createURLStreamHandlerFactory`, should this be `createUrlStreamHandlerFactory`?
+
+
+AndroidUri: org.chromium.net.CronetEngine#createURLStreamHandlerFactory():
+    Use android.net.Uri instead of java.net.URL (method org.chromium.net.CronetEngine.createURLStreamHandlerFactory())
+AndroidUri: org.chromium.net.CronetEngine#openConnection(java.net.URL):
+    Use android.net.Uri instead of java.net.URL (method org.chromium.net.CronetEngine.openConnection(java.net.URL))
+AndroidUri: org.chromium.net.CronetEngine#openConnection(java.net.URL) parameter #0:
+    Use android.net.Uri instead of java.net.URL (parameter url in org.chromium.net.CronetEngine.openConnection(java.net.URL url))
+
+
+BuilderSetStyle: org.chromium.net.CronetEngine.Builder#enableBrotli(boolean):
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.CronetEngine.Builder.enableBrotli(boolean)
+BuilderSetStyle: org.chromium.net.CronetEngine.Builder#enableHttp2(boolean):
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.CronetEngine.Builder.enableHttp2(boolean)
+BuilderSetStyle: org.chromium.net.CronetEngine.Builder#enableHttpCache(int, long):
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.CronetEngine.Builder.enableHttpCache(int,long)
+BuilderSetStyle: org.chromium.net.CronetEngine.Builder#enablePublicKeyPinningBypassForLocalTrustAnchors(boolean):
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.CronetEngine.Builder.enablePublicKeyPinningBypassForLocalTrustAnchors(boolean)
+BuilderSetStyle: org.chromium.net.CronetEngine.Builder#enableQuic(boolean):
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.CronetEngine.Builder.enableQuic(boolean)
+BuilderSetStyle: org.chromium.net.UrlRequest.Builder#allowDirectExecutor():
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.UrlRequest.Builder.allowDirectExecutor()
+BuilderSetStyle: org.chromium.net.UrlRequest.Builder#disableCache():
+    Builder methods names should use setFoo() / addFoo() / clearFoo() style: method org.chromium.net.UrlRequest.Builder.disableCache()
+
+
+ExecutorRegistration: org.chromium.net.UrlRequest#getStatus(org.chromium.net.UrlRequest.StatusListener):
+    Registration methods should have overload that accepts delivery Executor: `getStatus`
+
+
+GenericException: org.chromium.net.UrlRequest.Callback#onReadCompleted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, java.nio.ByteBuffer):
+    Methods must not throw generic exceptions (`java.lang.Exception`)
+GenericException: org.chromium.net.UrlRequest.Callback#onRedirectReceived(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, String):
+    Methods must not throw generic exceptions (`java.lang.Exception`)
+GenericException: org.chromium.net.UrlRequest.Callback#onResponseStarted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo):
+    Methods must not throw generic exceptions (`java.lang.Exception`)
+
+
+GetterOnBuilder: org.chromium.net.CronetEngine.Builder#getDefaultUserAgent():
+    Getter should be on the built object, not the builder: method org.chromium.net.CronetEngine.Builder.getDefaultUserAgent()
+
+
+ListenerInterface: org.chromium.net.UrlRequest.StatusListener:
+    Listeners should be an interface, or otherwise renamed Callback: StatusListener
+
+
+ListenerLast: org.chromium.net.CronetEngine#newUrlRequestBuilder(String, org.chromium.net.UrlRequest.Callback, java.util.concurrent.Executor) parameter #2:
+    Listeners should always be at end of argument list (method `newUrlRequestBuilder`)
+
+
+MissingGetterMatchingBuilder: org.chromium.net.CronetEngine.Builder#addPublicKeyPins(String, java.util.Set<byte[]>, boolean, java.util.Date):
+    org.chromium.net.CronetEngine does not declare a `getPublicKeyPinss()` method matching method org.chromium.net.CronetEngine.Builder.addPublicKeyPins(String,java.util.Set<byte[]>,boolean,java.util.Date)
+MissingGetterMatchingBuilder: org.chromium.net.CronetEngine.Builder#addQuicHint(String, int, int):
+    org.chromium.net.CronetEngine does not declare a `getQuicHints()` method matching method org.chromium.net.CronetEngine.Builder.addQuicHint(String,int,int)
+MissingGetterMatchingBuilder: org.chromium.net.CronetEngine.Builder#setLibraryLoader(org.chromium.net.CronetEngine.Builder.LibraryLoader):
+    org.chromium.net.CronetEngine does not declare a `getLibraryLoader()` method matching method org.chromium.net.CronetEngine.Builder.setLibraryLoader(org.chromium.net.CronetEngine.Builder.LibraryLoader)
+MissingGetterMatchingBuilder: org.chromium.net.CronetEngine.Builder#setStoragePath(String):
+    org.chromium.net.CronetEngine does not declare a `getStoragePath()` method matching method org.chromium.net.CronetEngine.Builder.setStoragePath(String)
+MissingGetterMatchingBuilder: org.chromium.net.CronetEngine.Builder#setUserAgent(String):
+    org.chromium.net.CronetEngine does not declare a `getUserAgent()` method matching method org.chromium.net.CronetEngine.Builder.setUserAgent(String)
+MissingGetterMatchingBuilder: org.chromium.net.UrlRequest.Builder#addHeader(String, String):
+    org.chromium.net.UrlRequest does not declare a `getHeaders()` method matching method org.chromium.net.UrlRequest.Builder.addHeader(String,String)
+MissingGetterMatchingBuilder: org.chromium.net.UrlRequest.Builder#setHttpMethod(String):
+    org.chromium.net.UrlRequest does not declare a `getHttpMethod()` method matching method org.chromium.net.UrlRequest.Builder.setHttpMethod(String)
+MissingGetterMatchingBuilder: org.chromium.net.UrlRequest.Builder#setPriority(int):
+    org.chromium.net.UrlRequest does not declare a `getPriority()` method matching method org.chromium.net.UrlRequest.Builder.setPriority(int)
+MissingGetterMatchingBuilder: org.chromium.net.UrlRequest.Builder#setUploadDataProvider(org.chromium.net.UploadDataProvider, java.util.concurrent.Executor):
+    org.chromium.net.UrlRequest does not declare a `getUploadDataProvider()` method matching method org.chromium.net.UrlRequest.Builder.setUploadDataProvider(org.chromium.net.UploadDataProvider,java.util.concurrent.Executor)
+
+
+MissingNullability: org.chromium.net.CallbackException#CallbackException(String, Throwable) parameter #0:
+    Missing nullability on parameter `message` in method `CallbackException`
+MissingNullability: org.chromium.net.CallbackException#CallbackException(String, Throwable) parameter #1:
+    Missing nullability on parameter `cause` in method `CallbackException`
+MissingNullability: org.chromium.net.CronetEngine#createURLStreamHandlerFactory():
+    Missing nullability on method `createURLStreamHandlerFactory` return
+MissingNullability: org.chromium.net.CronetEngine#getGlobalMetricsDeltas():
+    Missing nullability on method `getGlobalMetricsDeltas` return
+MissingNullability: org.chromium.net.CronetEngine#getVersionString():
+    Missing nullability on method `getVersionString` return
+MissingNullability: org.chromium.net.CronetEngine#newUrlRequestBuilder(String, org.chromium.net.UrlRequest.Callback, java.util.concurrent.Executor):
+    Missing nullability on method `newUrlRequestBuilder` return
+MissingNullability: org.chromium.net.CronetEngine#newUrlRequestBuilder(String, org.chromium.net.UrlRequest.Callback, java.util.concurrent.Executor) parameter #0:
+    Missing nullability on parameter `url` in method `newUrlRequestBuilder`
+MissingNullability: org.chromium.net.CronetEngine#newUrlRequestBuilder(String, org.chromium.net.UrlRequest.Callback, java.util.concurrent.Executor) parameter #1:
+    Missing nullability on parameter `callback` in method `newUrlRequestBuilder`
+MissingNullability: org.chromium.net.CronetEngine#newUrlRequestBuilder(String, org.chromium.net.UrlRequest.Callback, java.util.concurrent.Executor) parameter #2:
+    Missing nullability on parameter `executor` in method `newUrlRequestBuilder`
+MissingNullability: org.chromium.net.CronetEngine#openConnection(java.net.URL):
+    Missing nullability on method `openConnection` return
+MissingNullability: org.chromium.net.CronetEngine#openConnection(java.net.URL) parameter #0:
+    Missing nullability on parameter `url` in method `openConnection`
+MissingNullability: org.chromium.net.CronetEngine#startNetLogToFile(String, boolean) parameter #0:
+    Missing nullability on parameter `fileName` in method `startNetLogToFile`
+MissingNullability: org.chromium.net.CronetEngine.Builder#Builder(android.content.Context) parameter #0:
+    Missing nullability on parameter `context` in method `Builder`
+MissingNullability: org.chromium.net.CronetEngine.Builder#addPublicKeyPins(String, java.util.Set<byte[]>, boolean, java.util.Date):
+    Missing nullability on method `addPublicKeyPins` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#addPublicKeyPins(String, java.util.Set<byte[]>, boolean, java.util.Date) parameter #0:
+    Missing nullability on parameter `hostName` in method `addPublicKeyPins`
+MissingNullability: org.chromium.net.CronetEngine.Builder#addPublicKeyPins(String, java.util.Set<byte[]>, boolean, java.util.Date) parameter #1:
+    Missing nullability on parameter `pinsSha256` in method `addPublicKeyPins`
+MissingNullability: org.chromium.net.CronetEngine.Builder#addPublicKeyPins(String, java.util.Set<byte[]>, boolean, java.util.Date) parameter #3:
+    Missing nullability on parameter `expirationDate` in method `addPublicKeyPins`
+MissingNullability: org.chromium.net.CronetEngine.Builder#addQuicHint(String, int, int):
+    Missing nullability on method `addQuicHint` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#addQuicHint(String, int, int) parameter #0:
+    Missing nullability on parameter `host` in method `addQuicHint`
+MissingNullability: org.chromium.net.CronetEngine.Builder#build():
+    Missing nullability on method `build` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#enableBrotli(boolean):
+    Missing nullability on method `enableBrotli` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#enableHttp2(boolean):
+    Missing nullability on method `enableHttp2` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#enableHttpCache(int, long):
+    Missing nullability on method `enableHttpCache` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#enablePublicKeyPinningBypassForLocalTrustAnchors(boolean):
+    Missing nullability on method `enablePublicKeyPinningBypassForLocalTrustAnchors` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#enableQuic(boolean):
+    Missing nullability on method `enableQuic` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#getDefaultUserAgent():
+    Missing nullability on method `getDefaultUserAgent` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#setLibraryLoader(org.chromium.net.CronetEngine.Builder.LibraryLoader):
+    Missing nullability on method `setLibraryLoader` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#setLibraryLoader(org.chromium.net.CronetEngine.Builder.LibraryLoader) parameter #0:
+    Missing nullability on parameter `loader` in method `setLibraryLoader`
+MissingNullability: org.chromium.net.CronetEngine.Builder#setStoragePath(String):
+    Missing nullability on method `setStoragePath` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#setStoragePath(String) parameter #0:
+    Missing nullability on parameter `value` in method `setStoragePath`
+MissingNullability: org.chromium.net.CronetEngine.Builder#setUserAgent(String):
+    Missing nullability on method `setUserAgent` return
+MissingNullability: org.chromium.net.CronetEngine.Builder#setUserAgent(String) parameter #0:
+    Missing nullability on parameter `userAgent` in method `setUserAgent`
+MissingNullability: org.chromium.net.CronetEngine.Builder.LibraryLoader#loadLibrary(String) parameter #0:
+    Missing nullability on parameter `libName` in method `loadLibrary`
+MissingNullability: org.chromium.net.CronetException#CronetException(String, Throwable) parameter #0:
+    Missing nullability on parameter `message` in method `CronetException`
+MissingNullability: org.chromium.net.CronetException#CronetException(String, Throwable) parameter #1:
+    Missing nullability on parameter `cause` in method `CronetException`
+MissingNullability: org.chromium.net.NetworkException#NetworkException(String, Throwable) parameter #0:
+    Missing nullability on parameter `message` in method `NetworkException`
+MissingNullability: org.chromium.net.NetworkException#NetworkException(String, Throwable) parameter #1:
+    Missing nullability on parameter `cause` in method `NetworkException`
+MissingNullability: org.chromium.net.QuicException#QuicException(String, Throwable) parameter #0:
+    Missing nullability on parameter `message` in method `QuicException`
+MissingNullability: org.chromium.net.QuicException#QuicException(String, Throwable) parameter #1:
+    Missing nullability on parameter `cause` in method `QuicException`
+MissingNullability: org.chromium.net.UploadDataProvider#read(org.chromium.net.UploadDataSink, java.nio.ByteBuffer) parameter #0:
+    Missing nullability on parameter `uploadDataSink` in method `read`
+MissingNullability: org.chromium.net.UploadDataProvider#read(org.chromium.net.UploadDataSink, java.nio.ByteBuffer) parameter #1:
+    Missing nullability on parameter `byteBuffer` in method `read`
+MissingNullability: org.chromium.net.UploadDataProvider#rewind(org.chromium.net.UploadDataSink) parameter #0:
+    Missing nullability on parameter `uploadDataSink` in method `rewind`
+MissingNullability: org.chromium.net.UploadDataProviders#create(android.os.ParcelFileDescriptor):
+    Missing nullability on method `create` return
+MissingNullability: org.chromium.net.UploadDataProviders#create(android.os.ParcelFileDescriptor) parameter #0:
+    Missing nullability on parameter `fd` in method `create`
+MissingNullability: org.chromium.net.UploadDataProviders#create(byte[]):
+    Missing nullability on method `create` return
+MissingNullability: org.chromium.net.UploadDataProviders#create(byte[]) parameter #0:
+    Missing nullability on parameter `data` in method `create`
+MissingNullability: org.chromium.net.UploadDataProviders#create(byte[], int, int):
+    Missing nullability on method `create` return
+MissingNullability: org.chromium.net.UploadDataProviders#create(byte[], int, int) parameter #0:
+    Missing nullability on parameter `data` in method `create`
+MissingNullability: org.chromium.net.UploadDataProviders#create(java.io.File):
+    Missing nullability on method `create` return
+MissingNullability: org.chromium.net.UploadDataProviders#create(java.io.File) parameter #0:
+    Missing nullability on parameter `file` in method `create`
+MissingNullability: org.chromium.net.UploadDataProviders#create(java.nio.ByteBuffer):
+    Missing nullability on method `create` return
+MissingNullability: org.chromium.net.UploadDataProviders#create(java.nio.ByteBuffer) parameter #0:
+    Missing nullability on parameter `buffer` in method `create`
+MissingNullability: org.chromium.net.UploadDataSink#onReadError(Exception) parameter #0:
+    Missing nullability on parameter `exception` in method `onReadError`
+MissingNullability: org.chromium.net.UploadDataSink#onRewindError(Exception) parameter #0:
+    Missing nullability on parameter `exception` in method `onRewindError`
+MissingNullability: org.chromium.net.UrlRequest#getStatus(org.chromium.net.UrlRequest.StatusListener) parameter #0:
+    Missing nullability on parameter `listener` in method `getStatus`
+MissingNullability: org.chromium.net.UrlRequest#read(java.nio.ByteBuffer) parameter #0:
+    Missing nullability on parameter `buffer` in method `read`
+MissingNullability: org.chromium.net.UrlRequest.Builder#addHeader(String, String):
+    Missing nullability on method `addHeader` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#addHeader(String, String) parameter #0:
+    Missing nullability on parameter `header` in method `addHeader`
+MissingNullability: org.chromium.net.UrlRequest.Builder#addHeader(String, String) parameter #1:
+    Missing nullability on parameter `value` in method `addHeader`
+MissingNullability: org.chromium.net.UrlRequest.Builder#allowDirectExecutor():
+    Missing nullability on method `allowDirectExecutor` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#build():
+    Missing nullability on method `build` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#disableCache():
+    Missing nullability on method `disableCache` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#setHttpMethod(String):
+    Missing nullability on method `setHttpMethod` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#setHttpMethod(String) parameter #0:
+    Missing nullability on parameter `method` in method `setHttpMethod`
+MissingNullability: org.chromium.net.UrlRequest.Builder#setPriority(int):
+    Missing nullability on method `setPriority` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#setUploadDataProvider(org.chromium.net.UploadDataProvider, java.util.concurrent.Executor):
+    Missing nullability on method `setUploadDataProvider` return
+MissingNullability: org.chromium.net.UrlRequest.Builder#setUploadDataProvider(org.chromium.net.UploadDataProvider, java.util.concurrent.Executor) parameter #0:
+    Missing nullability on parameter `uploadDataProvider` in method `setUploadDataProvider`
+MissingNullability: org.chromium.net.UrlRequest.Builder#setUploadDataProvider(org.chromium.net.UploadDataProvider, java.util.concurrent.Executor) parameter #1:
+    Missing nullability on parameter `executor` in method `setUploadDataProvider`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onCanceled(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #0:
+    Missing nullability on parameter `request` in method `onCanceled`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onCanceled(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #1:
+    Missing nullability on parameter `info` in method `onCanceled`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onFailed(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, org.chromium.net.CronetException) parameter #0:
+    Missing nullability on parameter `request` in method `onFailed`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onFailed(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, org.chromium.net.CronetException) parameter #1:
+    Missing nullability on parameter `info` in method `onFailed`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onFailed(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, org.chromium.net.CronetException) parameter #2:
+    Missing nullability on parameter `error` in method `onFailed`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onReadCompleted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, java.nio.ByteBuffer) parameter #0:
+    Missing nullability on parameter `request` in method `onReadCompleted`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onReadCompleted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, java.nio.ByteBuffer) parameter #1:
+    Missing nullability on parameter `info` in method `onReadCompleted`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onReadCompleted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, java.nio.ByteBuffer) parameter #2:
+    Missing nullability on parameter `byteBuffer` in method `onReadCompleted`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onRedirectReceived(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, String) parameter #0:
+    Missing nullability on parameter `request` in method `onRedirectReceived`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onRedirectReceived(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, String) parameter #1:
+    Missing nullability on parameter `info` in method `onRedirectReceived`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onRedirectReceived(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo, String) parameter #2:
+    Missing nullability on parameter `newLocationUrl` in method `onRedirectReceived`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onResponseStarted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #0:
+    Missing nullability on parameter `request` in method `onResponseStarted`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onResponseStarted(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #1:
+    Missing nullability on parameter `info` in method `onResponseStarted`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onSucceeded(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #0:
+    Missing nullability on parameter `request` in method `onSucceeded`
+MissingNullability: org.chromium.net.UrlRequest.Callback#onSucceeded(org.chromium.net.UrlRequest, org.chromium.net.UrlResponseInfo) parameter #1:
+    Missing nullability on parameter `info` in method `onSucceeded`
+MissingNullability: org.chromium.net.UrlResponseInfo#getAllHeaders():
+    Missing nullability on method `getAllHeaders` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getAllHeadersAsList():
+    Missing nullability on method `getAllHeadersAsList` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getHttpStatusText():
+    Missing nullability on method `getHttpStatusText` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getNegotiatedProtocol():
+    Missing nullability on method `getNegotiatedProtocol` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getProxyServer():
+    Missing nullability on method `getProxyServer` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getUrl():
+    Missing nullability on method `getUrl` return
+MissingNullability: org.chromium.net.UrlResponseInfo#getUrlChain():
+    Missing nullability on method `getUrlChain` return
+
+
+NotCloseable: org.chromium.net.CronetEngine:
+    Classes that release resources (shutdown()) should implement AutoClosable and CloseGuard: class org.chromium.net.CronetEngine
+
+
+StaticFinalBuilder: org.chromium.net.CronetEngine.Builder:
+    Builder must be final: org.chromium.net.CronetEngine.Builder
+StaticFinalBuilder: org.chromium.net.UrlRequest.Builder:
+    Builder must be final: org.chromium.net.UrlRequest.Builder

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 4.1.0" client="cli" variant="all" version="4.1.0">
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.content.Context#sendOrderedBroadcast`"
+        errorLine1="        mContext.sendOrderedBroadcast(intent, Manifest.permission.RECEIVE_SMS,"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/CellBroadcastService/src/com/android/cellbroadcastservice/CdmaServiceCategoryProgramHandler.java"
+            line="155"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.telephony.NetworkRegistrationInfo#getCellIdentity`"
+        errorLine1="            cellIdentityList.add(nri.getCellIdentity());"
+        errorLine2="                                     ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/CellBroadcastService/src/com/android/cellbroadcastservice/GsmCellBroadcastHandler.java"
+            line="434"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level R (current min is 29): `android.telephony.NetworkRegistrationInfo#getCellIdentity`"
+        errorLine1="            cellIdentityList.add(nri.getCellIdentity());"
+        errorLine2="                                     ~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/CellBroadcastService/src/com/android/cellbroadcastservice/GsmCellBroadcastHandler.java"
+            line="441"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Method reference requires API level R (current min is 29): `CellInfo::getCellIdentity`"
+        errorLine1="                    infos.stream().map(CellInfo::getCellIdentity).collect(Collectors.toList()));"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="packages/modules/CellBroadcastService/src/com/android/cellbroadcastservice/GsmCellBroadcastHandler.java"
+            line="449"
+            column="40"/>
+    </issue>
+
+</issues>

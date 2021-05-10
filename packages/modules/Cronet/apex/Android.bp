@@ -1,0 +1,54 @@
+// Copyright (C) 2019 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+apex_defaults {
+    name: "com.android.cronet-defaults",
+    compile_multilib: "both",
+    jni_libs: ["libcronet.80.0.3986.0"],
+    java_libs: ["org.chromium.net.cronet"],
+    key: "com.android.cronet.key",
+    certificate: ":com.android.cronet.certificate",
+    updatable: false,
+
+    // Use a custom AndroidManifest.xml used for API targeting.
+    androidManifest: ":cronet-manifest.xml",
+}
+
+filegroup {
+    name: "cronet-manifest.xml",
+    srcs: [
+        "AndroidManifest.xml",
+    ],
+}
+
+apex {
+    name: "com.android.cronet",
+    defaults: ["com.android.cronet-defaults"],
+    manifest: "manifest.json",
+}
+
+apex_key {
+    name: "com.android.cronet.key",
+    public_key: "com.android.cronet.avbpubkey",
+    private_key: "com.android.cronet.pem",
+}
+
+android_app_certificate {
+     name: "com.android.cronet.certificate",
+     certificate: "com.android.cronet",
+}

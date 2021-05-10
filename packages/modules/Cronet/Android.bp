@@ -1,0 +1,112 @@
+// Copyright (C) 2019 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+java_import {
+    name: "cronet_impl_native_java",
+    jars: ["prebuilt/cronet_impl_native_java.jar"],
+    visibility: ["//visibility:private"],
+    apex_available: ["com.android.cronet"],
+}
+
+java_import {
+    name: "cronet_impl_common_java",
+    jars: ["prebuilt/cronet_impl_common_java.jar"],
+    visibility: ["//visibility:private"],
+    apex_available: ["com.android.cronet"],
+}
+
+java_import {
+    name: "cronet_impl_platform_java",
+    jars: ["prebuilt/cronet_impl_platform_java.jar"],
+    visibility: ["//visibility:private"],
+    apex_available: ["com.android.cronet"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libcronet.80.0.3986.0",
+    // STOPSHIP: Confirm if it is safe
+    shared_libs: [
+        "libandroid",
+        "libc",
+        "libdl",
+        "liblog",
+        "libm",
+    ],
+    stl: "libc++_static",
+    target: {
+        android_arm64: {
+            srcs: ["prebuilt/libs/arm64-v8a/libcronet.80.0.3986.0.so"],
+        },
+        android_arm: {
+            srcs: ["prebuilt/libs/armeabi-v7a/libcronet.80.0.3986.0.so"],
+        },
+        android_x86_64: {
+            srcs: ["prebuilt/libs/x86_64/libcronet.80.0.3986.0.so"],
+        },
+        android_x86: {
+            srcs: ["prebuilt/libs/x86/libcronet.80.0.3986.0.so"],
+        },
+    },
+    // These are already stripped, and restripping them just issues diagnostics.
+    strip: {
+        none: true,
+    },
+    apex_available: ["com.android.cronet"],
+}
+
+genrule {
+    name: "cronet_api-src",
+    srcs: ["prebuilt/cronet_api-src.jar"],
+    cmd: "cp $(in) $(out)",
+    out: [
+        "cronet_api-src.srcjar",
+    ],
+}
+
+java_sdk_library {
+    name: "org.chromium.net.cronet",
+    srcs: [
+        ":cronet_api-src",
+    ],
+    // Only public non-hide methods for now.
+    // TODO: Confirm target APIs with Cronet team.
+    api_packages: [
+        "org.chromium.net",
+    ],
+    libs: [
+        "androidx.annotation_annotation",
+    ],
+    static_libs: [
+        "cronet_impl_common_java",
+        "cronet_impl_native_java",
+        "cronet_impl_platform_java",
+    ],
+    // Add dependencies on files used by droiddoc_options.
+    droiddoc_option_files: [":cronet-api-current.txt"],
+    apex_available: ["com.android.cronet"],
+    unsafe_ignore_missing_latest_api: true,
+}
+
+// Make the current.txt available for use by the cts/tests/signature tests.
+// ========================================================================
+filegroup {
+    name: "cronet-api-current.txt",
+    srcs: [
+        "api/current.txt",
+    ],
+}
